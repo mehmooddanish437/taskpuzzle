@@ -1,0 +1,30 @@
+.container {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.number {
+    height: auto;
+    width: auto;
+    border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+
+}
