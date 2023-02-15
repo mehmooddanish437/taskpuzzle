@@ -6,6 +6,7 @@ const Puzzle = () => {
             for (let i = num.length-1; i > 0; i--) {
               const j = Math.floor(Math.random() * (i + 1));
               [num[i], num[j]] = [num[j], num[i]];
+              console.log(num[i], num[j])
             }
             return num;
           }
@@ -25,10 +26,13 @@ const Puzzle = () => {
     setPuzzleNumbers(numbers);
   };
 
+
+
   return (
     <div className="board">
       {puzzleNumbers.map((number, index) => (
         <div
+        draggable={true}
           key={index}
           onDragStart={event => onDragStart(event, index)}
           onDrop={event => onDrop(event, index)}
@@ -38,6 +42,7 @@ const Puzzle = () => {
           {number}
         </div>
       ))}
+
     </div>
   );
 };
